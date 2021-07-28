@@ -5,10 +5,6 @@ import EventItem from "@/components/EventItem";
 import Pagination from "@/components/Pagination";
 
 export default function EventsPage({ events, page, total }) {
-  console.log(events);
-  console.log(total);
-  console.log(page);
-
   const lastPage = Math.ceil(total / PER_PAGE);
   //calucalte last page with math.ceil taking in the total /per page
   return (
