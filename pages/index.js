@@ -23,12 +23,12 @@ export default function HomePage({ events }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=3`);
+ 
+  const res = await fetch(`${API_URL}/events`);
 
   const events = await res.json();
-
   return {
     props: { events },
-    revalidate: 500,
+    
   };
 }
